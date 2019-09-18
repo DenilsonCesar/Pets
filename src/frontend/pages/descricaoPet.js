@@ -3,7 +3,7 @@ import { Text, View, ScrollView, TouchableOpacity } from 'react-native'
 
 import { Photo, Nome, PadraoTitulo, PadraoDescricao, Sexo, Descricao } from '../pages/styles/mainStyles'
 import { ContainerImage} from '../pages/styles/descricaoPet'
-import { Container, Imgs, Titulo, Cad, Preecher } from './styles/addStyles'
+import { Container } from './styles/addStyles'
 
 import api from '../../backend/server/api';
 

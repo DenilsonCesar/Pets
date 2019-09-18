@@ -29,7 +29,18 @@ export const Preecher = styled.TextInput`
     border-bottom-color: black;
     border-bottom-width: 1;
     font-size: 16;
-    
+`;
+
+export const ViewConfigPhoto = styled.View`
+  border-color: #70DB93;
+  border-width: 1; 
+  border-radius: 20;
+  width: 80; 
+  height: 190; 
+  margin-left: 10;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17;
 `;
 
 

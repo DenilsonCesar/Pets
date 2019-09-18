@@ -32,7 +32,7 @@ export default class Main extends Component {
             refreshing: false,
             pesquisar: '',
             _id: null
-          };
+        };
     }
     
     registerToSocket = () => {
@@ -78,47 +78,48 @@ export default class Main extends Component {
         <View>
             <View>
                 <StatusBar barStyle={"light-content"} backgroundColor={'#70DB93'}/>
-                    <View style={{ alignItems: 'center'}}> 
-                        <ViewTitulo source={require('./styles/cabecalho.jpg')}/>
-                            <View style={{position: 'absolute'}}>
-                                <Titulo>Feed</Titulo>
-                                <Pesquisar
-                                    autoCorrect={false}
-                                    onSubmitEditing={ this.searchButton }
-                                    value={this.state._id}
-                                    onChangeText={ _id => this.setState({_id})} 
-                                placeholder={'Buscar'}/>{console.log(this.searchButton)}
-                                <Icon style={{marginTop: 80, position: 'absolute', paddingLeft: 10}} name='search' size={28} color={'#B5AAAA'}/>
-                            </View>
+                <View style={{ alignItems: 'center'}}> 
+                    <ViewTitulo source={require('./styles/cabecalho.jpg')}/>
+                    <View style={{position: 'absolute'}}>
+                        <Titulo>Feed</Titulo>
+                        <Pesquisar
+                            autoCorrect={false}
+                            onSubmitEditing={ this.searchButton }
+                            value={this.state._id}
+                            onChangeText={ _id => this.setState({_id})} 
+                            placeholder={'Buscar'}
+                        />
+                        <Icon style={{marginTop: 80, position: 'absolute', paddingLeft: 10}} name='search' size={28} color={'#B5AAAA'}/>
                     </View>
-                        <View style={{ alignItems: 'center' }}>
-                            <BordaBotao>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate('NovoPet')}>
-                                    <View style={{ marginRight: 5 }}>
-                                        <Text style={{ color: '#70DB93', justifyContent: 'flex-start', fontSize: 15,  marginLeft: 10 }}>
-                                            Novo Pet
-                                        </Text>
-                                    </View >
-                                </TouchableOpacity>
-                                    <DivBotao/>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate('Mapa')}>
-                                    <View style={{ marginRight: 5 }}>
-                                        <Text style={{ color: '#70DB93', justifyContent: 'center', fontSize: 15, marginLeft: 20, marginRight: 15 }}>
-                                            Mapa
-                                        </Text>
-                                    </View>
-                                </TouchableOpacity>
-                                    <DivBotao/>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate('Categorias')}>
-                                    <View>
-                                        <Text style={{ color: '#70DB93', justifyContent: 'flex-end', fontSize: 15 }}>
-                                            Categorias
-                                        </Text>
-                                    </View>
-                                </TouchableOpacity>
-                            </BordaBotao>    
-                        </View>
                 </View>
+                <View style={{ alignItems: 'center' }}>
+                    <BordaBotao>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('NovoPet')}>
+                            <View style={{ marginRight: 5 }}>
+                                <Text style={{ color: '#70DB93', justifyContent: 'flex-start', fontSize: 15,  marginLeft: 10 }}>
+                                    Novo Pet
+                                </Text>
+                            </View >
+                        </TouchableOpacity>
+                            <DivBotao/>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Mapa')}>
+                            <View style={{ marginRight: 5 }}>
+                                <Text style={{ color: '#70DB93', justifyContent: 'center', fontSize: 15, marginLeft: 20, marginRight: 15 }}>
+                                    Mapa
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                            <DivBotao/>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Categorias')}>
+                            <View>
+                                <Text style={{ color: '#70DB93', justifyContent: 'flex-end', fontSize: 15 }}>
+                                    Categorias
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                    </BordaBotao>    
+                </View>
+            </View>
             </View>
             <View>         
                 <FlatList
@@ -136,46 +137,40 @@ export default class Main extends Component {
                             <ContainerSecundario>
                                 <View style={{flexDirection: 'row'}}>
                                 
-                                        <Photo
-                                            source={{ uri: `${baseURL}../../file/${item.image}` }}
-                                        />
+                                    <Photo source={{ uri: `${baseURL}../../file/${item.image}` }}/>
               
-                                        <View style={{flexDirection: 'column'}}>
-                                            <NomeTitulo>Nome</NomeTitulo>
-                                                <Nome>{item._id}</Nome>
-                                        <View style={{flexDirection: 'column'}}>
-                                            <PadraoTitulo>Sexo</PadraoTitulo>
-                                                <PadraoDescricao>{item.sexo}</PadraoDescricao>
-                                        <View style={{flexDirection: 'column'}}>
-                                            <TouchableOpacity 
-                                                style={{backgroundColor: '#70DB93', height: 43, width: 116, borderRadius: 10, marginTop: 35}}
-                                                onPress={()=> this.props.navigation.navigate('Details' , 
-                                                    { 
-                                                        img: item.image, 
-                                                        nome: item._id,
-                                                        idade: item.idade, 
-                                                        desc: item.descricao, 
-                                                        sexo: item.sexo,
-                                                        tipo: item.tipo,
-                                                        cidade: item.cidade,
-                                                        bairro: item.bairro,
-                                                        rua: item.rua,
-                                                        num: item.num,
-                                                        tel: item.telefone
-                                                    })}>
-                                                <BotãoMais>Mais</BotãoMais>
-                                            </TouchableOpacity>
-                                        </View>
-                                        </View>
-                                        </View>
+                                    <View style={{flexDirection: 'column'}}>
+                                        <NomeTitulo>Nome</NomeTitulo>
+                                            <Nome>{item._id}</Nome>
+                                    <View style={{flexDirection: 'column'}}>
+                                        <PadraoTitulo>Sexo</PadraoTitulo>
+                                            <PadraoDescricao>{item.sexo}</PadraoDescricao>
+                                    <View style={{flexDirection: 'column'}}>
+                                        <TouchableOpacity 
+                                            style={{backgroundColor: '#70DB93', height: 43, width: 116, borderRadius: 10, marginTop: 35}}
+                                            onPress={()=> this.props.navigation.navigate('Details' , { 
+                                                img: item.image, 
+                                                nome: item._id,
+                                                idade: item.idade, 
+                                                desc: item.descricao, 
+                                                sexo: item.sexo,
+                                                tipo: item.tipo,
+                                                cidade: item.cidade,
+                                                bairro: item.bairro,
+                                                rua: item.rua,
+                                                num: item.num,
+                                                tel: item.telefone
+                                            })}
+                                        >
+                                            <BotãoMais>Mais</BotãoMais>
+                                        </TouchableOpacity>
+                                    </View>
+                                    </View>
+                                    </View>
                                 </View>
                                     <PadraoTitulo>Descrição</PadraoTitulo>
                                         <Descricao>{item.descricao}</Descricao>
-                                        <Text style={{fontSize: 15}}>
-                                       
-                                        {item.createdAt}
-           
-                                        </Text>
+                                        <Text style={{fontSize: 15}}>{item.createdAt}</Text>
                             </ContainerSecundario>
                         </View>
                         <View style={{alignItems: 'center'}}>

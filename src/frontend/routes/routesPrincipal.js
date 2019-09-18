@@ -35,8 +35,8 @@ const TabNavigator = createBottomTabNavigator({
 },{
     initialRouteName: 'Adoção',
     tabBarOptions: {
-        activeTintColor: 'gray',
-        inactiveTintColor: '#70DB93',
+        activeTintColor: '#70DB93',
+        inactiveTintColor: 'gray',
         tabStyle:{
           backgroundColor: '#fff'
 

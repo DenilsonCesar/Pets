@@ -9,8 +9,8 @@ import Cadastro from '../pages/cadastro';
 import NovoPet from '../pages/addPet';
 import Mapa from '../pages/maps';
 import Categorias from '../pages/categoria';
-import Camera from '../pages/camera';
-import Galeria from '../pages/galeria';
+//import Camera from '../pages/camera';
+//import Galeria from '../pages/galeria';
 
 import { Container, Titulo} from '../pages/styles/descricaoPet'
 
@@ -84,14 +84,6 @@ const AppNavigator  = createStackNavigator({
           }
         }
       },
-      Camera: {screen: Camera,
-        navigationOptions: {
-          header: null
-        }},
-      Galeria: {screen: Galeria,
-        navigationOptions: {
-          header: null
-      }},
   }
 );
   

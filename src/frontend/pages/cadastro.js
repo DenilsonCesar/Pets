@@ -4,27 +4,31 @@ import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-nativ
 
 import { PadraoTitulo } from '../pages/styles/mainStyles'
 import { Container } from '../pages/styles/cadastroStyles'
-import { Preecher } from './styles/addStyles'
+import { Preecher, Titulo } from './styles/addStyles'
 
 export default class pages extends Component {
   render() {
     return(
         <Container>
-            <PadraoTitulo style={{marginTop: 20}}>Nome</PadraoTitulo>
-                <Preecher placeholder= {'Seu nome'}/>
-            <PadraoTitulo>Email</PadraoTitulo>
-                <Preecher placeholder= {'exemplo@pet.com.br'}/>
-            <PadraoTitulo>Telefone/Celular/Whatsapp</PadraoTitulo>
-                <Preecher placeholder= {'(85) 98571-9195'} keyboardType= "numeric"/>
-            <PadraoTitulo>Cidade</PadraoTitulo>
-                <Preecher placeholder= {'Brasilia-DF'}/>
-            <PadraoTitulo>Bairro</PadraoTitulo>
-                <Preecher placeholder= {'Bairro das flores'}/>
-            <PadraoTitulo>Rua</PadraoTitulo>
-                <Preecher placeholder= {'Rua Z'}/>
-            <PadraoTitulo>Nº</PadraoTitulo>
-                <Preecher placeholder= {'000 A'} keyboardType= "numeric"/>
-            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Titulo>Login</Titulo>
+                <PadraoTitulo>Email</PadraoTitulo>
+                    <Preecher placeholder= {'exemplo@pet.com.br'}/>
+                <PadraoTitulo>Senha</PadraoTitulo>
+                    <Preecher secureTextEntry={true} placeholder= {'******'}/>
+            <Titulo>Informações adicionais</Titulo>
+                <PadraoTitulo style={{marginTop: 20}}>Nome</PadraoTitulo>
+                    <Preecher placeholder= {'Seu nome'}/>
+                <PadraoTitulo>Telefone/Celular/Whatsapp</PadraoTitulo>
+                    <Preecher placeholder= {'(85) 98571-9195'} keyboardType= "numeric"/>
+                <PadraoTitulo>Cidade</PadraoTitulo>
+                    <Preecher placeholder= {'Brasilia-DF'}/>
+                <PadraoTitulo>Bairro</PadraoTitulo>
+                    <Preecher placeholder= {'Bairro das flores'}/>
+                <PadraoTitulo>Rua</PadraoTitulo>
+                    <Preecher placeholder= {'Rua Z'}/>
+                <PadraoTitulo>Nº</PadraoTitulo>
+                    <Preecher placeholder= {'000 A'} keyboardType= "numeric"/>
+                <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <TouchableOpacity
                         style={{
                             backgroundColor: '#70DB93', 
