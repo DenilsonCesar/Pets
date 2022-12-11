@@ -13,7 +13,7 @@
     "cors": "^2.8.5",
     "date-fns": "^2.2.1",
     "date-fns-tz": "^1.0.7",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "formik": "^1.5.8",
     "fs": "0.0.1-security",
     "mongoose": "^5.7.0",
